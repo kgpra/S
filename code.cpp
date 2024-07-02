@@ -24,12 +24,12 @@ bool isValid(int board[9][9], int i, int j, int num, int n) {
     }
 
 
-    int rootn = sqrt(n);
-    int si = i - i % rootn;
-    int sj = j - j % rootn;
+    int square_roon= sqrt(n);
+    int si = i - i % square_roon;
+    int sj = j - j % square_roon;
 
-    for (int p = si; p < si + rootn; p++) {
-        for (int q = sj; q < sj + rootn; q++) {
+    for (int p = si; p < si + square_roon; p++) {
+        for (int q = sj; q < sj + square_roon; q++) {
             if (board[p][q] == num) {
                 return false;
             }
